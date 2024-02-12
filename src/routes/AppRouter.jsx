@@ -8,18 +8,16 @@ import Header from '../layout/Header'
 const guestRouter = createBrowserRouter([
   {
     path: '/',
-    element: (
-      <>
-        <Outlet />
-      </>
-    ),
+    element: <>
+      <Outlet />
+    </>,
     children: [
-      { index: true, path: '/login', element: <LoginForm /> },
-      { path: '/register', element: <RegisterForm /> }
+      { index: true, element: <LoginForm /> },
+      { path: '/register', element: <RegisterForm />},
+      { path: '/login', element: <LoginForm />}
     ]
   }
 ])
-
 
 const userRouter = createBrowserRouter([
   {
